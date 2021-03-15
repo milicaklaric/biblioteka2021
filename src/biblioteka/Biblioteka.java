@@ -1,11 +1,20 @@
 package biblioteka;
 
 import java.util.LinkedList;
-
 import biblioteka.interfejs.BibliotekaInterface;
 
+
+/**
+ * Ova Klasa implementira interfejs BibliotekaInterfejs i predstavlja implementaciju preko liste
+ * 
+ * @author MK
+ *
+ */
 public class Biblioteka implements BibliotekaInterface {
 
+	/**
+	 * Lista sa svim knjigama u biblioteci
+	 */
 	private LinkedList<Knjiga> knjige = new LinkedList<Knjiga>();
 	
 	//Nepotreban komentar 2
