@@ -7,13 +7,30 @@ public class Autor {
 	public String getIme() {
 		return ime;
 	}
+	
+	
+
+
 	public void setIme(String ime) {
+		if (ime == null)
+			throw new NullPointerException("Ime ne sme biti null");
+		
+		if (ime.length() <2)
+			throw new RuntimeException("Ime mora imati vise od 2 karaktera");
+		
 		this.ime = ime;
 	}
 	public String getPrezime() {
 		return prezime;
 	}
 	public void setPrezime(String prezime) {
+		if (prezime == null)
+			throw new NullPointerException("Prezime ne sme biti null");
+		
+		if (prezime.length() <2)
+			throw new RuntimeException("Prezime mora imati vise od 2 karaktera");
+		
+		
 		this.prezime = prezime;
 	}
 	
@@ -23,8 +40,8 @@ public class Autor {
 	
 	public Autor(String ime, String prezime) {
 		super();
-		this.ime = ime;
-		this.prezime = prezime;
+		setIme(ime);
+		setPrezime(prezime);
 	}
 	@Override
 	public String toString() {
